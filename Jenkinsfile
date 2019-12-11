@@ -4,7 +4,7 @@ pipeline {
   stages {
 
 		 
-    stage(‘Build’) {
+    stage(Build) {
 	steps {
 		echo "Build successful"
 	           }
@@ -12,17 +12,16 @@ pipeline {
 
 
 
-	stage (‘Test’) {
+	stage (Test) {
 	   steps {
 		   echo "Test has passed"
 		
 	          }
 			}
           
-    
-stage('Testing Environment') {
+		stage(Deploy) {
             steps {
-                echo "hello"
+				sh echo "Deployment has been deployed"
             }
         }
 
