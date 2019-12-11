@@ -1,17 +1,35 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:6-alpine' 
-            args '-p 3000:3000' 
-        }
+    agent any
+    environment{ 
+    VERSION = readMavenPom().getVersion()
     }
-	environment {
-	   HOME = '.'}
-    stages {
-        stage('Build') { 
+  stages {
+
+ 		stage("version"){
+            		steps{
+            		   echo "${VERSION}"
+            }
+    stage(‘Build’) {
+	steps {
+		//…
+	           }
+	 }
+
+
+
+	stage (‘Test’) {
+	   steps {
+		//…
+	          }
+			}
+          
+    
+stage('Testing Environment') {
             steps {
-                sh 'npm install' 
+                echo "hello"
             }
         }
-    }
-}
+
+
+		
+	   }   
