@@ -1,15 +1,9 @@
 pipeline {
     agent any
-    environment{ 
-    VERSION = readMavenPom().getVersion()
-    }
+  
   stages {
 
- 		stage("version"){
-            		steps{
-            		   echo "${VERSION}"
-            }
-		 }
+		 
     stage(‘Build’) {
 	steps {
 		echo "Build successful"
