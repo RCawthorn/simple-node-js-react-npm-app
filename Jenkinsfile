@@ -12,7 +12,7 @@ pipeline {
 		 }
     stage(‘Build’) {
 	steps {
-		
+		echo "Build successful"
 	           }
 	 }
 
@@ -20,6 +20,7 @@ pipeline {
 
 	stage (‘Test’) {
 	   steps {
+		   echo "Test has passed"
 		
 	          }
 			}
