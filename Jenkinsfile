@@ -9,6 +9,7 @@ pipeline {
             		steps{
             		   echo "${VERSION}"
             }
+		 }
     stage(‘Build’) {
 	steps {
 		//…
