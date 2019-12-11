@@ -12,7 +12,7 @@ pipeline {
 		 }
     stage(‘Build’) {
 	steps {
-		//…
+		
 	           }
 	 }
 
@@ -20,7 +20,7 @@ pipeline {
 
 	stage (‘Test’) {
 	   steps {
-		//…
+		
 	          }
 			}
           
